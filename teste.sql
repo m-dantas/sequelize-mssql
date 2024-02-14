@@ -39,3 +39,13 @@ CREATE TABLE APC.Arquivos (
     idProduto INT NOT NULL,
     FOREIGN KEY (idProduto) REFERENCES APC.Produtos(id)
 );
+
+CREATE TABLE APC.Autorizacoes (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    usuario VARCHAR(255) NOT NULL,
+	admin BIT NOT NULL,
+	createdAt DATETIMEOFFSET NOT NULL,
+	updatedAt DATETIMEOFFSET NOT NULL,
+    idSegmento INT NOT NULL,
+    FOREIGN KEY (idSegmento) REFERENCES APC.Segmentos(id)
+);
