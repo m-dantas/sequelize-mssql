@@ -12,12 +12,14 @@ app.use(express.json());
 const segmentoController = require('./api/controllers/segmentos.controller')
 const produtosController = require('./api/controllers/produtos.controller')
 const arquivosController = require('./api/controllers/arquivos.controller')
+const autorizacoesController = require('./api/controllers/autorizacoes.controller')
 
 
 // Apply routes
 app.use('/segmentos', segmentoController)
 app.use('/produtos', produtosController)
 app.use('/arquivos', arquivosController)
+app.use('/autorizacoes', autorizacoesController)
 
 app.listen(port, async () => {
 	try {
